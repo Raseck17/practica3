@@ -7,11 +7,109 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Assassin's Creed Valhalla</title>
 	<link rel="stylesheet" type="text/css" href="css/estilo.css">
-
+	<style>
+		.caja{
+			
+			font-family: cursive;
+			font-size: 18px;
+			width: 100%;
+			margin: 40px;
+		}
+		.formulario .caja-inputs{
+			padding: 20px;
+			/*background: black;*/
+			border-radius: 6px 6px 0 0;
+			color: white;
+			font-family: cursive;
+		}
+		.formulario input[type="text"], .formulario inputs[type="correo"]{
+			display: block;
+			width: 90%;
+			margin-bottom: 20px;
+			padding: 15px 10px;
+			border: none;
+			border-bottom: 5px solid #0000;
+			font-family: cursive;
+			font-size: 18px;
+		}
+		.formulario input[type="text"]:focus, .formulario input[type="correo"]:focus{
+			border-bottom: 2px solid #072620;
+		}
+		.formulario input[type="radio"]{
+			display: flex;
+		}
+		.formulario .sexo{
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content:space-around ;
+			margin-bottom: 20px;
+		}
+		.formulario .sexo .hombre{
+			border-radius: 5px 0 0 5px;
+		}
+		.formulario .sexo .mujer{
+			border-radius: 0 5px 0 5px;
+		}
+		.formulario .label-radio{
+			background: rgba(249,160,63,.4);
+			color: #fff;
+			padding: 10px;
+			text-align: center;
+			width: 49%;
+		}
+		.formulario input[type="radio"]:checked + .label-radio{
+			background: #072620;;
+		}
+		.formulario .terminos{
+			text-align: center;
+			color: #ffff;
+		}
+		.formulario .terminos label{
+			margin-left: 10px;
+		}
+		.formulario .error{
+			width: 90%;
+			display: none;
+			margin-top: 20px;
+			border-radius: 3px;
+			background: #ce1818;
+			color: #fff;
+			padding: 15px 10px;
+			padding-left: 40px;
+		}
+		.formulario .btn{
+			width: 90%;
+			text-align: center;
+			background: #246eb9;
+			color: #fff;
+			border: none;
+			display: block;
+			padding: 15px 10px;
+			cursor: pointer;
+			border-radius: 0 0 6px 6px;
+			font-family: cursive;
+			font-size: 18px;
+		}
+		.formulario .btn:hover{
+			background: #072620;;
+		}
+	</style>
 	
 </head>
 <body>
+	<style>
+		.main .href{
+			width: 100%;
+				background-image: url(imagenes/F2.jpg);
+				background-position-x: center;
+				background-position-y: center;
+				background-repeat: no-repeat;
+				background-size: 1000px;
+				border-radius: 6px 6px 6px 6px;
+	}
+	</style>
 	<div class="contenedor">
+		<header></header>
 		<header>
 			<nav>
 				<ul>
@@ -25,14 +123,29 @@
 		<section class="main">
 			<div class="imagen">
 				<h2>REGISTRO</h2>
-					<p>en construccion</p>
+					
 			</div>
 			<section class="href">
-				<article>
-					
-						
-
-				</article>	
+				<div class="caja">
+					<form action="" class="formulario" id="formulario" name="formulario">
+						<div class="caja-inputs">
+							<input type="text" name="nombre" placeholder="Nombre">
+							<input type="text" name="correo" placeholder="Correo">
+							<div class="sexo">
+								<input type="radio" name="sexo" id="hombre" value="Hombre">
+								<label class="label-radio-hombre" for="hombre">Hombre</label>
+								<input type="radio" name="sexo" id="mujer" value="Mujer">
+								<label class="label-radio-mujer" for="mujer">Mujer</label>
+							</div>
+							<div class="terminos">
+								<input type="checkbox" name="terminos" id="terminos">
+								<label for="terminos">Acepto los terminos y condiciones</label>
+							</div>
+							<ul class="error" id="error"></ul>
+						</div>
+						<input type="submit" class="btn" value="Registrarse">
+					</form>
+				</div>	
 			</section>
 		</section>
 		<aside>
@@ -55,6 +168,6 @@
 			<p>CESAR ALAIN TORRES FLORES ©</p>
 		</footer>
 	</div>
-	  <script src="js/acciones.js"></script>
+	  <script src="js/acciones2.js"></script>
 </body>
 </html>
